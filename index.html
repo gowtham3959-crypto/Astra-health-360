@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ASTRA HEALTH 360</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;600;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<nav><b>ASTRA HEALTH 360</b><button id="menu" aria-label="Menu">Menu</button>
+<div id="links"><a href="#home">Home</a><a href="#dash">Dashboard</a><a href="#anat">Human anatomy</a><a href="#ai">AI assistant</a><a href="#mc">Mission control</a><a href="#sim">Space simulation</a><a href="#hist">History</a><a href="#quest">Challenges</a><a href="#about">About</a></div></nav>
+
+<section id="home" class="hero"><div>
+<span class="sim">Simulated demo data</span>
+<h1 style="margin-top:14px">ASTRA HEALTH 360</h1>
+<p style="font-size:20px;margin-top:12px">Beyond Earth. Beyond Limits. Protecting Every Astronaut.</p>
+<p class="s" style="margin-top:8px">An intelligent AI-powered health monitoring platform designed to protect astronauts throughout their space exploration missions.</p>
+<div class="btns"><a class="btn" href="#dash">Explore Dashboard</a><a class="btn" href="#anat">Explore Human Body</a><a class="btn g" href="#sim">Start Mission Simulation</a></div><p class="note" id="mclk" style="letter-spacing:.14em"></p></div>
+<div class="earth"><span class="chip" style="top:6%;left:-6%" id="c1">HR --</span><span class="chip" style="top:46%;right:-8%" id="c2">SpO2 --</span><span class="chip" style="bottom:8%;left:2%" id="c3">Rad --</span></div></section>
+
+<section id="how"><h2>How it works</h2><p class="s">Three simple steps. No medical knowledge needed.</p><div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr))"><div class="card step"><span class="n">1</span><div><b>Explore the body</b><br>Tap any organ on the 3D body to see what it does and how space travel affects it.</div></div><div class="card step"><span class="n">2</span><div><b>Watch the vitals</b><br>Live gauges turn green, yellow, orange or red, so you see at once what needs attention.</div></div><div class="card step"><span class="n">3</span><div><b>Review and ask</b><br>Open History for saved readings, or ask the AI assistant for a plain-language summary.</div></div></div></section>
+<section id="anat"><h2>Human anatomy</h2><p class="s">Drag to rotate. Tap an organ to learn about it. Use the layer buttons to peel away the skin and look inside.</p>
+<div class="body3d"><div id="cvw"><div class="layers"><button class="btn g on" data-l="skin">Skin/Muscle</button><button class="btn g on" data-l="organs">Organs</button><button class="btn g on" data-l="bones">Bones</button><button class="btn g on" data-l="nerves">Nerves</button></div><div class="tools"><button class="btn g" data-v="0">Front</button><button class="btn g" data-v="1">Back</button><button class="btn g on" id="auto">Auto-rotate</button><button class="btn g" id="zi">Zoom +</button><button class="btn g" id="zo">Zoom −</button><button class="btn g" id="rs">Reset view</button></div></div>
+<div id="panel" class="card"><h3>Select an organ</h3><p class="s" style="margin-top:8px">Tap the brain, heart, lungs, liver, kidneys, stomach, intestines, bones, muscles or nerves on the model. Pick a button below if tapping is hard.</p><div id="olist" class="tabs"></div></div></div></section>
+
+<section id="dash"><h2>Astronaut live health dashboard</h2><p class="s">Every value below is <b>simulated sensor data</b> that updates every 2 seconds. It is not a real medical reading.</p><div class="legend"><span><i style="background:#34d399"></i>Normal</span><span><i style="background:#facc15"></i>Attention: slightly off</span><span><i style="background:#fb923c"></i>Warning: review soon</span><span><i style="background:#f43f5e"></i>Critical: act now</span></div><div class="card" id="score" style="margin-bottom:12px;display:flex;gap:16px;align-items:center"></div><div class="card" id="sumb" style="margin-bottom:12px;font-size:14px" aria-live="polite"></div>
+<div class="grid" id="gauges"></div></section>
+
+<section id="ai"><h2>AI health intelligence</h2><p class="s">A rule-based simulation that reads the dashboard and explains trends. It gives educational estimates, never diagnoses.</p>
+<div class="card" style="display:flex;gap:16px;align-items:flex-start"><div class="bot"></div><div style="flex:1"><button class="btn" id="an-btn">Analyze astronaut data</button><div id="ai-out" class="fade" style="margin-top:12px">Press the button to generate a summary.</div></div></div></section>
+
+<section id="sim"><h2>Space mission simulation</h2><p class="s">Switch environments to change the visuals, mission info and simulated readings.</p>
+<div class="tabs" id="mtabs"></div><div class="card" id="mcard" style="min-height:150px;transition:background .8s"></div></section>
+
+<section id="mc"><h2>Mission control and emergency alerts</h2><p class="s">Alerts come from the simulated readings and are sorted by priority.</p>
+
+<div id="alerts"></div>
+<div class="card" id="ctl"></div></section>
+
+<section id="quest"><h2>Daily mission challenges</h2><p class="s">Build healthy habits to earn points, ranks and badges. Tap a challenge once you have done it.</p>
+<div class="card" style="display:flex;gap:14px;align-items:center;margin-bottom:12px;flex-wrap:wrap"><div style="flex:1;min-width:180px"><b id="lvl"></b><div class="bar"><i id="xp"></i></div><small class="note" id="nxt"></small></div><div id="badges" style="font-size:28px;letter-spacing:4px" aria-label="Badges earned"></div></div>
+<div class="grid" id="qs" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))"></div></section>
+<section id="hist"><h2>Astronaut health history</h2><p class="s">Readings are saved to your private cloud storage and come back after a refresh. All values are simulated.</p>
+<div class="grid" id="pipe" style="grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-bottom:12px"><div class="card step"><span class="n">1</span><div><b>Sense</b><br><small class="note" style="margin:0">Simulated sensors update every 2 seconds.</small></div></div><div class="card step"><span class="n">2</span><div><b>Save</b><br><small class="note" id="p2" style="margin:0"></small></div></div><div class="card step"><span class="n">3</span><div><b>Analyze</b><br><small class="note" id="p3" style="margin:0"></small></div></div><div class="card step"><span class="n">4</span><div><b>Report</b><br><small class="note" style="margin:0">Read insights, then copy a summary.</small></div></div></div>
+<div class="card" style="margin-bottom:12px"><div class="tabs"><button class="btn" id="sv">Save reading now</button><button class="btn g" id="sm">Add 7-day sample history</button><button class="btn g on" id="au">Auto-save every 30 s: on</button><button class="btn g" id="cl">Clear history</button></div><p class="note" id="hs" role="status"></p></div>
+<div class="tabs" id="hmt"></div><div class="tabs" id="hrt"></div><div class="tabs" id="hft"></div>
+<div class="card"><div class="grid" id="hstat" style="grid-template-columns:repeat(auto-fit,minmax(90px,1fr));margin-bottom:10px"></div><canvas class="ch" id="hc" style="height:280px;touch-action:pan-y"></canvas><p class="note" id="htip">Tap or hover the graph to inspect a reading. The green band is the normal range.</p></div>
+<h3 style="margin:20px 0 10px;font-size:18px">Insights from your readings</h3><div class="card" id="ins"></div>
+<h3 style="margin:20px 0 10px;font-size:18px">Recent readings</h3><div class="card" id="log"></div>
+<div class="tabs" style="margin-top:14px"><button class="btn" id="rp">Generate and copy summary</button></div><textarea id="rep" readonly hidden rows="12" aria-label="Health summary" style="width:100%;font:12px ui-monospace,monospace;color:#f4ecd8;background:#ffffff0d;border:1px solid #e6c97a40;border-radius:10px;padding:10px"></textarea>
+<h3 style="margin:20px 0 10px;font-size:16px">All metrics at a glance</h3><div class="grid" id="spark"></div></section>
+
+
+
+<section id="about"><h2>About this project</h2><p class="s">ASTRA HEALTH 360 is a student concept demo. All data is simulated. It is not connected to NASA or any medical device, and it makes no medical claims. Not for diagnosis or treatment.</p></section>
+<footer>ASTRA HEALTH 360 · concept demo · simulated data only</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+</body></html>
